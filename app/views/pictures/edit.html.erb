@@ -1,0 +1,15 @@
+<h1>Edit this image</h1>
+
+<form action="/update_picture/<%= params[:id] %>">
+  <div>
+    <label for="the_caption">Caption:</label>
+    <input id="the_caption" type="text" name="caption" value="<%= Picture.find(params[:id]).caption %>">
+  </div>
+  <div>
+    <label for="image_url">Image URL:</label>
+    <input id="image_url" type="text" name="source" value="<%= Picture.find(params[:id]).source %>">
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>

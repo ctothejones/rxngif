@@ -1,0 +1,17 @@
+<h1>All Pictures</h1>
+
+<a href="/new_picture_form">Add a picture</a>
+
+<ul>
+  <% @all_pictures.each do |picture| %>
+    <li>
+      <div>
+       <a href="/picture_details/<%= picture.id %>"><img src="<%= picture.source %>" width="400"></a>
+      </div>
+
+      <div>
+        <%= picture.caption %>
+      </div>
+    </li>
+  <% end %>
+</ul>
